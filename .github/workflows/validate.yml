@@ -1,0 +1,51 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check skill identity, resources and local links
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          from urllib.parse import unquote
+
+          root = Path.cwd().resolve()
+          skill = root / 'skills/assert-skill'
+          entry = (skill / 'SKILL.md').read_text()
+          assert re.search(r'^name: assert-skill$', entry, re.M), 'Skill name mismatch'
+          assert re.search(r'^description: .+', entry, re.M), 'Missing description'
+          interface = (skill / 'agents/openai.yaml').read_text()
+          assert 'display_name: "Assert Skill"' in interface, 'UI name mismatch'
+          assert '$assert-skill' in interface, 'Invocation mismatch'
+          assert (root / 'LICENSE').read_bytes() == (skill / 'LICENSE').read_bytes(), 'Missing standalone notice'
+          links = 0
+          for doc in root.rglob('*.md'):
+              if '.git' in doc.relative_to(root).parts:
+                  continue
+              assert not doc.is_symlink(), f'Unexpected symlink: {doc}'
+              for dest in re.findall(r'!?\[[^\]]*\]\(([^\s)]+)\)', doc.read_text()):
+                  if dest.startswith(('https://', 'http://', 'mailto:', '#')):
+                      continue
+                  target = (doc.parent / unquote(dest.split('#', 1)[0])).resolve()
+                  assert target.is_relative_to(root), f'Link escapes package: {doc}: {dest}'
+                  assert target.exists(), f'Missing resource: {doc}: {dest}'
+                  links += 1
+          for asset in ('docs/images/hero.png', 'docs/images/workflow.svg'):
+              assert (root / asset).is_file(), f'Missing illustration: {asset}'
+          print(f'PASS: skill identity, standalone notice, images and {links} local links')
+          print('Static package checks only; no behavioral or external-user validation.')
+          PY
