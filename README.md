@@ -13,6 +13,18 @@ an idea rather than an empty collection of planning templates.
 
 **Two languages. Seven interview categories. One coherent setup.**
 
+## Try a natural request
+
+Once this skill is installed and visible to your assistant, try:
+
+> Help me start a local data-quality project. Talk with me in Italian and write project documents in English. Interview me before creating files; finish with the first work package ready.
+
+The remaining interview questions, followed after answers by an appropriately sized plan, roles and verifiable first work package. Supplied language choices are reused.
+
+See the [synthetic input/output example](examples/natural-request.md) for expected
+behavior and nearby tasks that need another workflow. Automatic selection
+depends on your host and model; explicit invocation remains available.
+
 ## What happens when you start
 
 1. Establish the language for the conversation and the language for project

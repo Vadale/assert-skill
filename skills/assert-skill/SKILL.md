@@ -1,6 +1,6 @@
 ---
 name: assert-skill
-description: "Start an AI-assisted project by interviewing the user, planning the work, selecting appropriate agents and preparing a verifiable first work package. Establish conversation and artifact languages separately. Use for project kickoff or an explicit request for this workflow, with agnostic/ChatGPT and Claude Code paths; preserve existing project conventions."
+description: "Set up an AI-assisted project: establish conversation and artifact languages, interview the user, plan work, select suitable agent roles and prepare the first verifiable work package. Use for project kickoff or a requested setup workflow, with agnostic/ChatGPT and Claude Code paths; not routine implementation, assertion writing or project resumption."
 ---
 
 # Assert Skill
