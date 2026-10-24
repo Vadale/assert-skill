@@ -13,6 +13,26 @@ an idea rather than an empty collection of planning templates.
 
 **Two languages. Seven interview categories. One coherent setup.**
 
+## Install with skills.sh or Gemini CLI
+
+Use the cross-agent installer and select your host:
+
+```sh
+npx skills add Vadale/assert-skill --skill assert-skill
+```
+
+Or install the Gemini CLI extension from its packaged release:
+
+```sh
+gemini extensions install https://github.com/Vadale/assert-skill
+```
+
+The host must have access to the materials you explicitly select. Installation does not grant access to other projects, accounts or conversations.
+
+Restart the assistant session and confirm the skill is visible before use.
+These packaging instructions do not establish full-workflow testing in every
+client, automatic model selection or a gallery ranking.
+
 ## Try a natural request
 
 Once this skill is installed and visible to your assistant, try:
