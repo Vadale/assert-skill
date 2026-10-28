@@ -25,6 +25,22 @@ compact working document. No team, subscription or implementation is automatic.
 If a language choice is missing, it asks for that choice before substantive setup.
 See the [opening conversation](first-conversation.md) and [setup outline](setup-result.md).
 
+## Clarifying a later request
+
+The generated project instructions keep a compact clarification rule. They reuse
+known decisions without loading the kickoff skill again:
+
+- “Complete the report” can proceed when the agreed indicators, chart and
+  limitations already define completion.
+- If the audience or meaning of “complete” changes the deliverable and is still
+  unknown, ask a focused question, explain the tradeoff and propose a bounded
+  option. Do not invent acceptance, a budget or permission.
+- An explicit change of scope updates the current mandate; an ambiguous new idea
+  needs a choice between replacing current work and saving it for later.
+
+These are illustrative patterns, not a transcript or a guarantee for every model.
+Clear requests need no prompt rewrite, repeated interview or routine reapproval.
+
 ## When to use another workflow
 
 Resuming an established project from its handoff is continuity work. Implementing

@@ -40,6 +40,10 @@ already supplied; complete coverage does not mean repeated questions.
 For an existing project, recover its actual entrypoint/checkpoint and resolve
 only gaps relevant to the current mandate; do not restart the whole interview.
 
+Read [request clarity](references/request-clarity.md) when consequential ambiguity
+remains. Clear requests need no prompt rewrite or extra confirmation. Carry the
+compact rule into the project as directed by lean setup for later work.
+
 ## 3. Propose, plan and set up the project
 
 Once the interview is resolved, read [lean setup](references/lean-setup.md), then
