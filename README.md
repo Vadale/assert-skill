@@ -36,7 +36,7 @@ client, automatic model selection or a gallery ranking.
 ## Pi, DeepSeek Harness and Hermes
 
 These clients can load the same complete [skills/assert-skill](skills/assert-skill)
-folder. Keep its references, scripts, runtime source and licenses together;
+folder. Keep its references, assets and licenses together;
 copying only `SKILL.md` loses required resources.
 
 **Pi:** install this repository as a Git package:
@@ -77,7 +77,7 @@ Once this skill is installed and visible to your assistant, try:
 
 > Help me start a local data-quality project. Talk with me in Italian and write project documents in English. Interview me before creating files; finish with the first work package ready.
 
-The remaining interview questions, followed after answers by an appropriately sized plan, roles and verifiable first work package. Supplied language choices are reused.
+Expect the remaining interview questions, followed after your answers by an appropriately sized plan, roles and verifiable first work package. Supplied language choices are reused.
 
 See the [synthetic input/output example](examples/natural-request.md) for expected
 behavior and nearby tasks that need another workflow. Automatic selection
@@ -104,6 +104,11 @@ means addressing every relevant category, not asking seven questions again when
 you already provided the answers. For one small task, plan/decisions/state/diary
 can share a concise working document. Larger projects get only useful roles and
 independent checks; the skill does not invent a whole team.
+
+When an ambiguity would change the result, cost or permissions, the skill asks
+focused questions and can propose a concrete success criterion. Clear requests
+need no prompt rewrite or extra confirmation. Generated project instructions
+retain a compact clarification rule for later work, without repeating kickoff.
 
 ## Start a project
 

@@ -150,6 +150,22 @@ Include condition → resource/section pointers, especially simplifier Core and
 cumulative T (tests/removal/path changes), P (performance), D (delicate rewrite).
 Do not keep a second contradictory authoritative entrypoint.
 
+Materialize a compact **Request clarity** rule in the entrypoint's working method,
+in the selected artifact language. Keep it self-contained, without requiring the
+installed skill, its paths or the original manuals. Cover this behavior:
+
+> Reuse known answers, decisions and authority. Proceed on clear requests within
+> scope. Ask grouped questions only when an unresolved ambiguity changes the goal,
+> audience, inputs, deliverable, cost, permissions or acceptance; explain the
+> consequence and propose a justified choice when useful. Do not invent decisions
+> or repeat the kickoff interview. Use proportionate observable checks. Clarify
+> ambiguous scope changes, respect explicit changes and continue independent
+> authorized work. Record durable decisions in the existing plan/checkpoint. No
+> round cap suppresses essential clarification; no routine reapproval is required.
+
+This rule survives setup; it does not make Assert the default skill for ordinary
+execution or require a separate procedure/agent for every request.
+
 Use [roles](roles.md) when needed; materialize only relevant mandates/procedures.
 For sharing, read [sharing](sharing.md) and wire the existing publication-fit-review
 skill/role if available; its absence has a self-contained fallback.
@@ -159,6 +175,8 @@ This is a private-scaffolding default, not a filename ban when a method/skill is
 itself the authorized product. Keep useful public instructions/tests/terms.
 Check local links and instructions in the resulting project, not only templates.
 For code, verify Core/T/P/D and their trigger pointers survived setup/translation.
+Check that Request clarity is present and usable without the installed skill,
+including in compact S setups and conversation-only drafts.
 Do not initialize, commit, push, create remotes or install tools merely because
 size M/L suggests Git/CI. Use only authorized, useful Git operations and preserve
 protected original indexes; the review is not permission for history changes.
